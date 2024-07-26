@@ -129,7 +129,6 @@ header nav ul li:hover .dropdown-content {
     animation: gradientBG 15s ease infinite;
 }
 
-
 .intro-logos_oh {
     display: flex;
     overflow: hidden;
@@ -172,12 +171,6 @@ header nav ul li:hover .dropdown-content {
     background: linear-gradient(135deg, #378FCE, #634B98, #B64491, #E84684, #EB6837);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 .services {
@@ -294,6 +287,30 @@ header nav ul li:hover .dropdown-content {
     font-style: normal;
     margin-top: 10px;
 }
+
+/* Gear Section styles */
+.gear-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+
+}
+
+.gear-logo {
+    height: 500px;
+    transition: transform 0.1s linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
 
 /* Footer styles */
 footer {

@@ -33,3 +33,20 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(section);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const gearLogo = document.querySelector(".gear-logo");
+
+    let rotation = 0;
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const delta = scrollTop - lastScrollTop;
+
+        rotation += delta;
+        gearLogo.style.transform = `rotate(${rotation}deg)`;
+
+        lastScrollTop = scrollTop;
+    });
+});
