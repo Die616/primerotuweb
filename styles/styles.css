@@ -12,71 +12,61 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFFFFF;
     padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid #DDD;
+    background-color: #fff; /* Ajusta el color de fondo según tu diseño */
+    z-index: 10;
 }
 
-header .logo img {
-    height: 100px;
+.logo img {
+    max-height: 60px; /* Ajusta la altura del logo según sea necesario */
 }
 
-header nav ul {
-    list-style: none;
+nav ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
+    gap: 20px; /* Espacio entre los elementos del menú */
 }
 
-header nav ul li {
-    margin-left: 20px;
+nav ul li {
     position: relative;
 }
 
-header nav ul li a {
+nav ul li a {
+    display: block;
+    padding: 10px;
     text-decoration: none;
-    color: #1C1C1C;
-    font-size: 16px;
-    padding: 8px 12px;
+    color: #000;
 }
 
-header nav ul li a:hover {
-    color: #E84684;
-}
-
-header nav ul li .dropdown-content {
+nav ul li .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #FFFFFF;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    border-radius: 4px;
+    background-color: #fff;
     min-width: 160px;
-    top: 100%;
-    left: 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 20;
+    right: 0;
 }
 
-header nav ul li .dropdown-content a {
-    display: block;
-    padding: 10px 20px;
+nav ul li .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
-    color: #1C1C1C;
-    font-size: 14px;
-    white-space: nowrap;
-}
-
-header nav ul li .dropdown-content a:hover {
-    background-color: #F0F0F0;
-    color: #E84684;
-}
-
-header nav ul li:hover .dropdown-content {
     display: block;
 }
 
-/* Letras section styles */
+nav ul li .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Hero section styles */
 .hero-section {
     position: relative;
     height: 70vh;
@@ -89,14 +79,15 @@ header nav ul li:hover .dropdown-content {
 }
 
 .typewriter {
-    font-size: 2em;
+    font-size: 2em; /* Ajustado de 1em a 2em */
     margin-bottom: 20px;
     border-right: 2px solid white;
     white-space: pre-wrap;
     overflow: hidden;
     animation: blink-caret 0.75s step-end infinite;
 }
-/*Botones*/
+
+/* Botones */
 button {
     --glow-color: #b64491;
     --glow-spread-color: rgba(191, 123, 255, 0.3); /* Reducir opacidad */
@@ -145,7 +136,6 @@ button:active {
                 0 0 2em 1em var(--glow-spread-color), /* Reducir tamaño del brillo */
                 inset 0 0 .5em .1em var(--glow-color);
 }
-/*****************/
 
 /* Banner styles */
 .banner-container {
@@ -194,6 +184,7 @@ button:active {
     }
 }
 
+/* Servicios styles */
 .services {
     display: flex;
     justify-content: space-around;

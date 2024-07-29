@@ -1,3 +1,4 @@
+/* Letras */
 const text = `Nos especializamos en la creación de software a medida.
 Nuestro equipo de expertos trabaja continuamente para ofrecerte las mejores soluciones tecnológicas.`;
 const typewriterElement = document.querySelector('.typewriter');
@@ -16,6 +17,7 @@ function type() {
 
 type();
 
+/* Intersection Observer */
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll(".section");
 
@@ -34,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+/* Engrane */
 document.addEventListener("DOMContentLoaded", function() {
     const gearLogo = document.querySelector(".gear-logo");
 
@@ -51,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-/*imagen 3d*/
+/* Imagen 3D */
 const pane = document.querySelector('.pane');
 
 pane.addEventListener('mousemove', (e) => {
