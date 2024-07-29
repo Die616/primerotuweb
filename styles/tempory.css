@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF; /* Fondo principal */
+    color: #1C1C1C; /* Color del texto principal */
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #303132; /* Fondo del encabezado */
+    color: #FFFFFF; /* Color del texto del encabezado */
+}
+
+.logo img {
+    max-height: 60px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav ul li .dropdown-content a {
+    color: #1C1C1C;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Contenido Principal */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Pie de página */
+footer {
+    background-color: #303132;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+}
