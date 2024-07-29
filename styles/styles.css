@@ -76,7 +76,7 @@ header nav ul li:hover .dropdown-content {
     display: block;
 }
 
-/* Hero section styles */
+/* Letras section styles */
 .hero-section {
     position: relative;
     height: 70vh;
@@ -85,35 +85,67 @@ header nav ul li:hover .dropdown-content {
     align-items: center;
     color: #FFFFFF;
     text-align: center;
-    background: linear-gradient(135deg, #378FCE, #634B98, #B64491, #E84684, #EB6837);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    background: #303132;
 }
 
 .typewriter {
-    font-size: 2em; /* Ajustado de 1em a 2em */
+    font-size: 2em;
     margin-bottom: 20px;
     border-right: 2px solid white;
     white-space: pre-wrap;
     overflow: hidden;
     animation: blink-caret 0.75s step-end infinite;
 }
-
-.hero-content button {
-    background-color: #1C1C1C;
-    color: #FFFFFF;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
+/*Botones*/
+button {
+    --glow-color: #b64491;
+    --glow-spread-color: rgba(191, 123, 255, 0.3); /* Reducir opacidad */
+    --enhanced-glow-color: #e84684;
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 0.5em .1em var(--glow-color), /* Reducir tamaño del brillo */
+                0 0 2em 0.5em var(--glow-spread-color), /* Reducir tamaño del brillo */
+                inset 0 0 .5em .1em var(--glow-color); /* Reducir tamaño del brillo */
+    text-shadow: 0 0 .3em var(--glow-color); /* Reducir tamaño del brillo */
+    position: relative;
+    transition: all 0.3s;
 }
 
-.hero-content button:hover {
-    background-color: #E84684;
-    color: #FFFFFF;
+button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(1.5em); /* Reducir el desenfoque */
+    opacity: .5; /* Reducir opacidad */
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
 }
+
+button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 0.5em .1em var(--glow-color),
+                0 0 3em 1em var(--glow-spread-color), /* Reducir tamaño del brillo */
+                inset 0 0 .5em .1em var(--glow-color);
+}
+
+button:active {
+    box-shadow: 0 0 0.5em .1em var(--glow-color),
+                0 0 2em 1em var(--glow-spread-color), /* Reducir tamaño del brillo */
+                inset 0 0 .5em .1em var(--glow-color);
+}
+/*****************/
 
 /* Banner styles */
 .banner-container {
@@ -124,9 +156,7 @@ header nav ul li:hover .dropdown-content {
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    background: linear-gradient(135deg, #378FCE, #634B98, #B64491, #E84684, #EB6837); /* Añadir esta línea */
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    background: #634B98;
 }
 
 .intro-logos_oh {
@@ -162,15 +192,6 @@ header nav ul li:hover .dropdown-content {
     100% {
         transform: translateX(-100%);
     }
-}
-
-/* Section styles */
-.section {
-    padding: 40px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #378FCE, #634B98, #B64491, #E84684, #EB6837);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
 }
 
 .services {
@@ -218,15 +239,12 @@ header nav ul li:hover .dropdown-content {
 }
 
 .service a:hover h3 {
-    color: #ffcc00;
+    color: #B64491;
 }
 
 /* Call-to-action styles */
 .call-to-action {
-    background-color: rgba(255, 255, 255, 0.8);
     padding: 60px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
@@ -238,21 +256,6 @@ header nav ul li:hover .dropdown-content {
 .call-to-action p {
     font-size: 18px;
     margin-bottom: 20px;
-}
-
-.call-to-action .cta-button {
-    padding: 10px 20px;
-    font-size: 18px;
-    color: #FFFFFF;
-    background-color: #1C1C1C;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.call-to-action .cta-button:hover {
-    background-color: #E84684;
-    color: #FFFFFF;
 }
 
 /* Testimonials styles */
@@ -294,7 +297,6 @@ header nav ul li:hover .dropdown-content {
     justify-content: center;
     align-items: center;
     padding: 40px 0;
-
 }
 
 .gear-logo {
@@ -302,15 +304,9 @@ header nav ul li:hover .dropdown-content {
     transition: transform 0.1s linear;
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(180deg);
-    }
+.gear-section:focus-within .gear-logo {
+    outline: 5px solid #E84684; /* Cambia el color y tamaño del contorno según sea necesario */
 }
-
 
 /* Footer styles */
 footer {
@@ -389,34 +385,34 @@ footer {
     }
 }
 
-/*imagen 3d*/
+/* Imagen 3D */
 .container {
     perspective: 1000px;
     width: 500px; /* Ajusta según el tamaño deseado */
     height: 300px; /* Ajusta según el tamaño deseado */
     margin: 50px auto; /* Centra el contenedor */
-  }
-  
-  .pane {
-    outline: 2px solid #00ff6a;
-    box-shadow: 0 0 10px #00ff6a77, inset 0 0 10px #00ff6a77;
+}
+
+.pane {
+    outline: 2px solid #e84684;
+    box-shadow: 0 0 10px #b64491, inset 0 0 10px #b64491;
     height: 100%; /* Ocupa toda la altura del contenedor */
     width: 100%; /* Ocupa toda la anchura del contenedor */
     border-radius: 5px;
     position: relative;
     overflow: hidden;
     transition: transform 0.1s ease-out; /* Transición rápida para una respuesta fluida */
-  }
-  
-  .image-container {
+}
+
+.image-container {
     height: 100%; /* Ocupa toda la altura del panel */
     width: 100%; /* Ocupa toda la anchura del panel */
     position: relative;
     overflow: hidden;
-  }
-  
-  .image-container img {
+}
+
+.image-container img {
     height: 100%; /* Ajusta la imagen para que ocupe todo el contenedor */
     width: 100%; /* Ajusta la imagen para que ocupe todo el contenedor */
     object-fit: cover; /* Cubre el contenedor sin deformarse */
-  }  
+}
