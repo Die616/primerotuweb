@@ -255,14 +255,14 @@ button:active {
 /* Gear Section styles */
 .gear-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     padding: 40px 0;
 }
 
 .gear-logo {
-    height: 500px;
-    transition: transform 0.1s linear;
+    height: 1000px;
+    transition: transform 0.5s linear;
 }
 
 .gear-section:focus-within .gear-logo {
