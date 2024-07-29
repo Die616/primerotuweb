@@ -50,3 +50,22 @@ document.addEventListener("DOMContentLoaded", function() {
         lastScrollTop = scrollTop;
     });
 });
+
+/*imagen 3d*/
+const pane = document.querySelector('.pane');
+
+pane.addEventListener('mousemove', (e) => {
+  const width = pane.offsetWidth;
+  const height = pane.offsetHeight;
+  const mouseX = e.offsetX;
+  const mouseY = e.offsetY;
+
+  const rotateY = ((mouseX / width) * 2 - 1) * 20; // Rango de -30 a 30 grados
+  const rotateX = ((mouseY / height) * 2 - 1) * -20; // Rango de -30 a 30 grados
+
+  pane.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+});
+
+pane.addEventListener('mouseleave', () => {
+  pane.style.transform = 'rotateY(0) rotateX(0)'; // Vuelve a la posición original cuando el mouse sale del panel
+});

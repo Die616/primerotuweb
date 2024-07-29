@@ -388,3 +388,35 @@ footer {
         transform: translateY(0);
     }
 }
+
+/*imagen 3d*/
+.container {
+    perspective: 1000px;
+    width: 500px; /* Ajusta según el tamaño deseado */
+    height: 300px; /* Ajusta según el tamaño deseado */
+    margin: 50px auto; /* Centra el contenedor */
+  }
+  
+  .pane {
+    outline: 2px solid #00ff6a;
+    box-shadow: 0 0 10px #00ff6a77, inset 0 0 10px #00ff6a77;
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    width: 100%; /* Ocupa toda la anchura del contenedor */
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.1s ease-out; /* Transición rápida para una respuesta fluida */
+  }
+  
+  .image-container {
+    height: 100%; /* Ocupa toda la altura del panel */
+    width: 100%; /* Ocupa toda la anchura del panel */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    height: 100%; /* Ajusta la imagen para que ocupe todo el contenedor */
+    width: 100%; /* Ajusta la imagen para que ocupe todo el contenedor */
+    object-fit: cover; /* Cubre el contenedor sin deformarse */
+  }  
