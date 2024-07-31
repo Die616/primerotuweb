@@ -104,7 +104,7 @@ nav ul li:hover .dropdown-content {
     transform: translateX(-50%);
 }
 
-/*Boton*/
+/* Botón */
 button {
     --glow-color: #b64491;
     --glow-spread-color: rgba(191, 123, 255, 0.3);
@@ -153,7 +153,6 @@ button:active {
                 0 0 2em 1em var(--glow-spread-color),
                 inset 0 0 .5em .1em var(--glow-color);
 }
-
 
 /* Banner styles */
 .banner-container {
@@ -284,14 +283,18 @@ button:active {
 /* Gear Section styles */
 .gear-section {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: left;
+    left: 0;
+    transform: translate(-25%);
     padding: 40px 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .gear-logo {
     height: 1000px;
-    transition: transform 0.5s linear;
+    transition: transform 0.1s linear;
 }
 
 /* Footer styles */
