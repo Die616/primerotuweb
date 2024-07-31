@@ -78,27 +78,36 @@ nav ul li:hover .dropdown-content {
     padding: 0px 350px;
 }
 
-.fixed-text {
-    position: absolute;
-    bottom: 250px; /* Ajusta según sea necesario para colocar el texto justo sobre el botón */
-    font-size: 1.2em; /* Ajusta el tamaño del texto según tus necesidades */
-    color: #FFFFFF; /* Ajusta el color según sea necesario */
-    text-align: left;
+.hero-content {
+    position: relative;
     width: 100%;
+}
+
+.fixed-text {
+    margin-top: 100px;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    text-align: left;
 }
 
 .typewriter {
     font-size: 3em;
-    margin-bottom: 50px;
     white-space: pre-wrap;
     overflow: hidden;
     animation: blink-caret 0.75s step-end infinite;
 }
 
-/* Botones */
+.button-container {
+    position: absolute;
+    bottom: 80px; /* Ajusta este valor según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*Boton*/
 button {
     --glow-color: #b64491;
-    --glow-spread-color: rgba(191, 123, 255, 0.3); /* Reducir opacidad */
+    --glow-spread-color: rgba(191, 123, 255, 0.3);
     --enhanced-glow-color: #e84684;
     --btn-color: rgb(100, 61, 136);
     border: .25em solid var(--glow-color);
@@ -109,10 +118,10 @@ button {
     background-color: var(--btn-color);
     border-radius: 1em;
     outline: none;
-    box-shadow: 0 0 0.5em .1em var(--glow-color), /* Reducir tamaño del brillo */
-                0 0 2em 0.5em var(--glow-spread-color), /* Reducir tamaño del brillo */
-                inset 0 0 .5em .1em var(--glow-color); /* Reducir tamaño del brillo */
-    text-shadow: 0 0 .3em var(--glow-color); /* Reducir tamaño del brillo */
+    box-shadow: 0 0 0.5em .1em var(--glow-color), 
+                0 0 2em 0.5em var(--glow-spread-color), 
+                inset 0 0 .5em .1em var(--glow-color);
+    text-shadow: 0 0 .3em var(--glow-color);
     position: relative;
     transition: all 0.3s;
 }
@@ -126,8 +135,8 @@ button::after {
     height: 100%;
     width: 100%;
     background-color: var(--glow-spread-color);
-    filter: blur(1.5em); /* Reducir el desenfoque */
-    opacity: .5; /* Reducir opacidad */
+    filter: blur(1.5em);
+    opacity: .5;
     transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
 }
 
@@ -135,15 +144,16 @@ button:hover {
     color: var(--btn-color);
     background-color: var(--glow-color);
     box-shadow: 0 0 0.5em .1em var(--glow-color),
-                0 0 3em 1em var(--glow-spread-color), /* Reducir tamaño del brillo */
+                0 0 3em 1em var(--glow-spread-color), 
                 inset 0 0 .5em .1em var(--glow-color);
 }
 
 button:active {
     box-shadow: 0 0 0.5em .1em var(--glow-color),
-                0 0 2em 1em var(--glow-spread-color), /* Reducir tamaño del brillo */
+                0 0 2em 1em var(--glow-spread-color),
                 inset 0 0 .5em .1em var(--glow-color);
 }
+
 
 /* Banner styles */
 .banner-container {
@@ -284,10 +294,6 @@ button:active {
     transition: transform 0.5s linear;
 }
 
-.gear-section:focus-within .gear-logo {
-    outline: 5px solid #E84684; /* Cambia el color y tamaño del contorno según sea necesario */
-}
-
 /* Footer styles */
 footer {
     background-color: #FFFFFF;
@@ -366,6 +372,10 @@ footer {
 }
 
 /* Imagen 3D */
+.image-3d-container{
+    background-color: #303132;
+}
+
 .container {
     perspective: 1000px;
     width: 800px; /* Ajusta según el tamaño deseado */
@@ -389,6 +399,7 @@ footer {
     width: 100%; /* Ocupa toda la anchura del panel */
     position: relative;
     overflow: hidden;
+    background-color: #FFFFFF;
 }
 
 .image-container img {

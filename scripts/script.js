@@ -1,21 +1,20 @@
 /* Letras */
-const text = `Nos especializamos en la creación de software a medida.
-Nuestro equipo de expertos trabaja continuamente para ofrecerte las mejores soluciones tecnológicas.`;
-const typewriterElement = document.querySelector('.typewriter');
+document.addEventListener('DOMContentLoaded', function () {
+    const text = "Nos especializamos en la creación de software a medida. Nuestro equipo de expertos trabaja continuamente para ofrecerte las mejores soluciones tecnológicas.";
+    let i = 0;
+    const speed = 50; // velocidad de escritura
 
-let i = 0;
-
-function type() {
-    if (i < text.length) {
-        typewriterElement.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, 50); // Ajusta la velocidad de escritura aquí
-    } else {
-        typewriterElement.style.borderRight = 'none'; // Elimina el cursor al terminar
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("typewriter").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
     }
-}
 
-type();
+    typeWriter();
+});
+
 
 /* Intersection Observer */
 document.addEventListener("DOMContentLoaded", function() {

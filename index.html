@@ -31,14 +31,16 @@
     <!-- Sección Letras -->
     <section class="hero-section">
         <div class="hero-content">
-            <div class="typewriter"></div>
+            <div class="typewriter" id="typewriter"></div>
             <div class="fixed-text">Nos comprometemos a brindar un servicio excepcional y a trabajar contigo en cada paso del camino para asegurar que tus proyectos digitales sean un éxito.</div>
-            <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' });">Contáctanos</button>
+            <div class="button-container">
+                <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' });">Contáctanos</button>
+            </div>
         </div>
     </section>
 
     <!-- Contenedor de Imagen 3D -->
-    <section>
+    <section class="image-3d-container">
         <div class="container">
             <div class="pane">
                 <div class="image-container">
@@ -118,7 +120,7 @@
     <!-- Sección del Engranaje -->
     <section class="gear-section" id="gear-section">
         <img src="images/logos/logo-gira.png" alt="Engranaje" class="gear-logo">
-    </section>
+    </section>    
 
     <!-- Sección Placeholder -->
     <section class="new section">
