@@ -1,3 +1,12 @@
+:root 
+{
+    --glow-color: #b64491;
+    --glow-spread-color: rgba(191, 123, 255, 0.3);
+    --enhanced-glow-color: #e84684;
+    --btn-color: rgb(100, 61, 136);
+}
+
+
 /* General styles */
 body {
     font-family: Arial, sans-serif;
@@ -108,10 +117,6 @@ nav ul li:hover .dropdown-content {
 
 /* Botón */
 button {
-    --glow-color: #b64491;
-    --glow-spread-color: rgba(191, 123, 255, 0.3);
-    --enhanced-glow-color: #e84684;
-    --btn-color: rgb(100, 61, 136);
     border: .25em solid var(--glow-color);
     padding: 1em 3em;
     color: var(--glow-color);
