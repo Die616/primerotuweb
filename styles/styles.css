@@ -81,10 +81,12 @@ nav ul li:hover .dropdown-content {
 .hero-content {
     position: relative;
     width: 100%;
+    align-items: left;
+    max-width: 800px;
 }
 
 .fixed-text {
-    margin-top: 100px;
+    margin-top: 80px;
     font-size: 1.2em;
     color: #FFFFFF;
     text-align: left;
@@ -99,7 +101,7 @@ nav ul li:hover .dropdown-content {
 
 .button-container {
     position: absolute;
-    bottom: 80px; /* Ajusta este valor según sea necesario */
+    margin-top: 80px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -208,6 +210,7 @@ button:active {
     align-items: center;
     padding: 40px 0;
     background: #303132;
+    color: white;
 }
 
 .service {
@@ -377,13 +380,14 @@ footer {
 /* Imagen 3D */
 .image-3d-container{
     background-color: #303132;
+    height: 700px;
 }
 
 .container {
     perspective: 1000px;
     width: 800px; /* Ajusta según el tamaño deseado */
     height: 600px; /* Ajusta según el tamaño deseado */
-    margin: 50px auto; /* Centra el contenedor */
+    margin: auto; /* Centra el contenedor */
 }
 
 .pane {

@@ -1,6 +1,6 @@
 /* Letras */
 document.addEventListener('DOMContentLoaded', function () {
-    const text = "Nos especializamos en la creación de software a medida. Nuestro equipo de expertos trabaja continuamente para ofrecerte las mejores soluciones tecnológicas.";
+    const text = "Software a medida especializado.... Expertos en soluciones tecnológicas.";
     let i = 0;
     const speed = 50; // velocidad de escritura
 
